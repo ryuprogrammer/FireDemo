@@ -9,21 +9,7 @@ struct StampView: View {
         NavigationStack {
             ZStack {
                 ScrollView {
-                    HStack {
-                        Text("メモ: ショップ→メニューで、下にショップ")
-                        Text("ご来店回数100000回")
-                            .font(.title)
-                            .fontWeight(.bold)
-                    }
-                    .padding(.top)
-                    .padding(.horizontal)
-                    
-                    HStack {
-                        Text("スタンプカード")
-                        Spacer()
-                    }
-                    .padding(.top)
-                    .padding(.horizontal)
+                    AdvertisementView()
                     
                     Image("stamp\(stampCount)")
                         .resizable()
@@ -46,32 +32,28 @@ struct StampView: View {
                             }
                         }
                     
+                    Text("1日1回、店頭で商品をご購入していただくと、1個スタンプが貯まります。スタンプが10個貯まるとクーポンを獲得できます！")
+                        .font(.callout)
+                        .foregroundStyle(Color.gray)
+                        .padding()
+                    
                     HStack {
                         Text("クーポン")
                         Spacer()
                     }
-                    .padding(.top)
                     .padding(.horizontal)
                     
-                    Text("トッピング引換券")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .foregroundStyle(Color.white)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 50)
-                        .background(Color.orange)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .padding(.horizontal)
-                    
-                    Text("100円引きクーポン")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .foregroundStyle(Color.white)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 50)
-                        .background(Color.orange)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .padding(.horizontal)
+                    ForEach(0..<3) {_ in
+                        Text("トッピング引換券")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .foregroundStyle(Color.white)
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 50)
+                            .background(Color.cyan)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            .padding(.horizontal)
+                    }
                 }
                 
                 VStack {
