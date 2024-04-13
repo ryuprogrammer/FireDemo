@@ -9,8 +9,8 @@ struct StampView: View {
         NavigationStack {
             ZStack {
                 ScrollView {
-                    AdvertisementView()
-                    
+                    Spacer()
+                        .frame(height: 60)
                     Image("stamp\(stampCount)")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -19,6 +19,7 @@ struct StampView: View {
                         .shadow(color: Color.black.opacity(0.5), radius: 10, x: 5, y: 5)
                         .shadow(color: Color.gray.opacity(0.3), radius: 10, x: -5, y: -5)
                         .padding(.horizontal)
+                        .padding(.top)
                         .rotation3DEffect(
                             // 回転の角度を isMaxStamp によって変更
                             Angle(degrees: isMaxStamp ? 360 : 0),
@@ -57,6 +58,8 @@ struct StampView: View {
                 }
                 
                 VStack {
+                    AdvertisementView()
+                    
                     Spacer()
                     
                     Button {
