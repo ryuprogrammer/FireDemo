@@ -4,6 +4,8 @@ struct StampView: View {
     
     @State private var stampCount: Int = 0
     @State private var isMaxStamp: Bool = false
+    @State private var couponCount: Int = 3
+    @State private var couponData: [String] = ["トッピング引換券", "トッピング引換券"]
     
     var body: some View {
         NavigationStack {
@@ -29,7 +31,10 @@ struct StampView: View {
                         .onTapGesture {
                             withAnimation {
                                 isMaxStamp.toggle()
-                                stampCount = 0
+                                if stampCount == 10 {
+                                    stampCount = 0
+                                    couponData.append("トッピング引換券")
+                                }
                             }
                         }
                     
@@ -44,8 +49,8 @@ struct StampView: View {
                     }
                     .padding(.horizontal)
                     
-                    ForEach(0..<3) {_ in
-                        Text("トッピング引換券")
+                    ForEach(couponData, id: \.self) { data in
+                        Text(data)
                             .font(.title2)
                             .fontWeight(.bold)
                             .foregroundStyle(Color.white)
@@ -65,8 +70,6 @@ struct StampView: View {
                     Button {
                         if stampCount < 10 {
                             stampCount += 1
-                        } else {
-                            stampCount = 0
                         }
                     } label: {
                         Text("スタンプをGETする")

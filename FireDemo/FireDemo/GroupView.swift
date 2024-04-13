@@ -28,8 +28,8 @@ struct GroupView: View {
     
     enum ViewSection: String {
         case stampView = "スタンプ"
+        case menuView = "メニュー"
         case informationView = "出店情報"
-        case shopView = "ショップ"
         case homeView = "ホーム"
     }
     
@@ -45,25 +45,25 @@ struct GroupView: View {
                 }
                 .tag(ViewSection.stampView)
             
+            MenuView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "fork.knife")
+                            .environment(\.symbolVariants, selection == .menuView ? .fill : .none)
+                        Text(ViewSection.menuView.rawValue)
+                    }
+                }
+                .tag(ViewSection.menuView)
+            
             InformationView()
                 .tabItem {
                     VStack {
-                        Image(systemName: "map")
+                        Image(systemName: "truck.box")
                             .environment(\.symbolVariants, selection == .informationView ? .fill : .none)
                         Text(ViewSection.informationView.rawValue)
                     }
                 }
                 .tag(ViewSection.informationView)
-            
-            ShopView()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "cart")
-                            .environment(\.symbolVariants, selection == .shopView ? .fill : .none)
-                        Text(ViewSection.shopView.rawValue)
-                    }
-                }
-                .tag(ViewSection.shopView)
             
             HomeView()
                 .tabItem {

@@ -1,15 +1,17 @@
-//
-//  MenuView.swift
-//  FireDemo
-//
-//  Created by トム・クルーズ on 2024/04/12.
-//
-
 import SwiftUI
 
 struct MenuView: View {
+    let imageWidth = UIScreen.main.bounds.width / 2
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            ScrollView {
+                ForEach(menuData, id: \.self) { memu in
+                    MenuElementView(menu: memu)
+                }
+                .padding(.vertical)
+            }
+            .navigationBarTitle("メニュー", displayMode: .inline)
+        }
     }
 }
 
