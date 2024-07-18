@@ -5,6 +5,9 @@
 //  Created by トム・クルーズ on 2024/04/12.
 //
 
+private let apiKey = "AIzaSyCeQc_0wIhxpWuGqVDvqFCgqp4zfUgqjTQ"
+private let spreadsheetId = "1j6_PE-oePpknUlM1FPl1wyN9pZr9kM20pIPDPzN3oCw"
+
 import SwiftUI
 
 struct HomeView: View {

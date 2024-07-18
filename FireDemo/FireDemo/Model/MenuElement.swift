@@ -1,6 +1,7 @@
 import Foundation
 
 struct MenuElement: Hashable {
+    let menuType: MenuType
     let name: String
     let image: String
     let isContainFlavor: Bool

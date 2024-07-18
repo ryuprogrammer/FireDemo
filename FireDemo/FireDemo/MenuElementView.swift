@@ -29,6 +29,10 @@ struct MenuElementView: View {
                                 .clipShape(RoundedRectangle(cornerRadius: 8))
                         }
                     }
+                } else {
+                    Text(menu.info)
+                        .font(.callout)
+                        .foregroundStyle(Color.gray)
                 }
                 
                 ForEach(menu.sizePrice, id: \.self) { sizePrice in
@@ -48,6 +52,7 @@ struct MenuElementView: View {
 
 #Preview {
     MenuElementView(menu: MenuElement(
+        menuType: .curry,
         name: "チキンカレー",
         image: "menu0",
         isContainFlavor: true,

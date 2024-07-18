@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		422567B02C467D5900BBC6D0 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422567AF2C467D5900BBC6D0 /* TextView.swift */; };
+		422567B42C481EF400BBC6D0 /* AppAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 422567B32C481EF400BBC6D0 /* AppAuth */; };
+		422567B62C481EF400BBC6D0 /* AppAuthCore in Frameworks */ = {isa = PBXBuildFile; productRef = 422567B52C481EF400BBC6D0 /* AppAuthCore */; };
+		422567B82C481EF400BBC6D0 /* AppAuthTV in Frameworks */ = {isa = PBXBuildFile; productRef = 422567B72C481EF400BBC6D0 /* AppAuthTV */; };
 		42ED60162BC8BF94008B9472 /* FireDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED60152BC8BF94008B9472 /* FireDemoApp.swift */; };
 		42ED60182BC8BF94008B9472 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED60172BC8BF94008B9472 /* ContentView.swift */; };
 		42ED601A2BC8BF94008B9472 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED60192BC8BF94008B9472 /* Item.swift */; };
@@ -26,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		422567AF2C467D5900BBC6D0 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		422567B12C481E8A00BBC6D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		42ED60122BC8BF94008B9472 /* FireDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42ED60152BC8BF94008B9472 /* FireDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireDemoApp.swift; sourceTree = "<group>"; };
 		42ED60172BC8BF94008B9472 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +57,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				422567B82C481EF400BBC6D0 /* AppAuthTV in Frameworks */,
+				422567B42C481EF400BBC6D0 /* AppAuth in Frameworks */,
+				422567B62C481EF400BBC6D0 /* AppAuthCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,8 +85,10 @@
 		42ED60142BC8BF94008B9472 /* FireDemo */ = {
 			isa = PBXGroup;
 			children = (
+				422567B12C481E8A00BBC6D0 /* Info.plist */,
 				42ED60152BC8BF94008B9472 /* FireDemoApp.swift */,
 				42ED60172BC8BF94008B9472 /* ContentView.swift */,
+				422567AF2C467D5900BBC6D0 /* TextView.swift */,
 				42ED60282BC8DBA5008B9472 /* GroupView.swift */,
 				42ED60262BC8BFC3008B9472 /* StampView.swift */,
 				42ED602A2BC8DEE8008B9472 /* ShopView.swift */,
@@ -129,6 +140,11 @@
 			dependencies = (
 			);
 			name = FireDemo;
+			packageProductDependencies = (
+				422567B32C481EF400BBC6D0 /* AppAuth */,
+				422567B52C481EF400BBC6D0 /* AppAuthCore */,
+				422567B72C481EF400BBC6D0 /* AppAuthTV */,
+			);
 			productName = FireDemo;
 			productReference = 42ED60122BC8BF94008B9472 /* FireDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -157,6 +173,9 @@
 				Base,
 			);
 			mainGroup = 42ED60092BC8BF94008B9472;
+			packageReferences = (
+				422567B22C481EF400BBC6D0 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */,
+			);
 			productRefGroup = 42ED60132BC8BF94008B9472 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -192,6 +211,7 @@
 				42ED603A2BCA6AC6008B9472 /* MenuElementView.swift in Sources */,
 				42ED60352BC8FAD9008B9472 /* AdvertisementView.swift in Sources */,
 				42ED60382BCA6581008B9472 /* MenuElement.swift in Sources */,
+				422567B02C467D5900BBC6D0 /* TextView.swift in Sources */,
 				42ED60182BC8BF94008B9472 /* ContentView.swift in Sources */,
 				42ED601A2BC8BF94008B9472 /* Item.swift in Sources */,
 				42ED60272BC8BFC3008B9472 /* StampView.swift in Sources */,
@@ -330,6 +350,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FireDemo/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -368,6 +389,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FireDemo/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -415,6 +437,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		422567B22C481EF400BBC6D0 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/openid/AppAuth-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		422567B32C481EF400BBC6D0 /* AppAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 422567B22C481EF400BBC6D0 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */;
+			productName = AppAuth;
+		};
+		422567B52C481EF400BBC6D0 /* AppAuthCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 422567B22C481EF400BBC6D0 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */;
+			productName = AppAuthCore;
+		};
+		422567B72C481EF400BBC6D0 /* AppAuthTV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 422567B22C481EF400BBC6D0 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */;
+			productName = AppAuthTV;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 42ED600A2BC8BF94008B9472 /* Project object */;
 }

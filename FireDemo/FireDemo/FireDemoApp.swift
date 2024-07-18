@@ -38,7 +38,7 @@ struct FireDemoApp: App {
     
     var body: some Scene {
         WindowGroup {
-            GroupView()
+            TextView()
         }
         .modelContainer(sharedModelContainer)
     }
